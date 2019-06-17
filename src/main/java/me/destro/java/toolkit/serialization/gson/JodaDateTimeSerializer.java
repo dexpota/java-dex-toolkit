@@ -1,4 +1,4 @@
-package me.destro.java.toolkit.serialization;
+package me.destro.java.toolkit.serialization.gson;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonPrimitive;
@@ -11,7 +11,7 @@ import org.joda.time.format.DateTimeFormatter;
 import java.lang.reflect.Type;
 
 public class JodaDateTimeSerializer implements JsonSerializer<DateTime> {
-    public final DateTimeFormatter dateTimeFormatter;
+    private final DateTimeFormatter dateTimeFormatter;
 
     public JodaDateTimeSerializer(DateTimeFormatter formatter) { dateTimeFormatter = formatter; }
 
